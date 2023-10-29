@@ -3,7 +3,7 @@ import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <><h1>Hi!</h1><main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -22,8 +22,7 @@ export default function Home() {
               className={styles.vercelLogo}
               width={100}
               height={24}
-              priority
-            />
+              priority />
           </a>
         </div>
       </div>
@@ -35,8 +34,7 @@ export default function Home() {
           alt="Next.js Logo"
           width={180}
           height={37}
-          priority
-        />
+          priority />
       </div>
 
       <div className={styles.grid}>
@@ -90,6 +88,6 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main>
+    </main></>
   )
 }
