@@ -4,11 +4,22 @@ FROM node:18.16.1 AS build
 WORKDIR /app
 
 # package 복사
-COPY /package*.json ./
+COPY /my-app/package*.json ./
 RUN npm install
 #파일전체복사
-COPY / .
+COPY /my-app .
+RUN npm build
 
-ADD test.sh ./
-RUN chmod +x ./test.sh
-CMD ["./test.sh"]
+FROM node:18.16.1  AS runner
+WORKDIR /app
+
+COPY --from=build /app/package*.json ./
+COPY --from=build ./
+COPY --from=build /app/public ./public
+COPY --from=build  /app/.next/static ./.next/static
+
+# 운영환경 Install
+RUN npm install --production 
+
+EXPOSE 7878
+CMD ["npm", "start"]
