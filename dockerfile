@@ -7,7 +7,7 @@ WORKDIR /app
 COPY /package*.json ./
 RUN npm install
 #파일전체복사
-COPY /QQ .
+COPY / .
 RUN npm build
 
 FROM node:18.16.1  AS runner
