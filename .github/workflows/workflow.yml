@@ -19,5 +19,5 @@ jobs:
           aws-region: ap-northeast-1 # AWS 리전 선택
       #AWS ECR(Elastic Container Registry)
       - name: Login to Amazon ECR # AWS-ECR 로그인
-        id: Angie
+        id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
