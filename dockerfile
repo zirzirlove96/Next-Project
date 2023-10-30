@@ -14,7 +14,6 @@ FROM node:18.16.1  AS runner
 WORKDIR /app
 
 COPY --from=build /app/package*.json ./
-COPY --from=build ./
 COPY --from=build /app/public ./public
 COPY --from=build  /app/.next/static ./.next/static
 
