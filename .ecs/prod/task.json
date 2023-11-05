@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:714582658072:task-definition/demo:2",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:714582658072:task-definition/demo:1",
     "containerDefinitions": [
         {
             "name": "study",
-            "image": "714582658072.dkr.ecr.ap-northeast-2.amazonaws.com/demo:demo-24",
+            "image": "714582658072.dkr.ecr.ap-northeast-2.amazonaws.com/demo:latest",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,8 +16,10 @@
             ],
             "essential": true,
             "environment": [],
+            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
+            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -25,14 +27,15 @@
                     "awslogs-group": "/ecs/demo",
                     "awslogs-region": "ap-northeast-2",
                     "awslogs-stream-prefix": "ecs"
-                }
+                },
+                "secretOptions": []
             }
         }
     ],
     "family": "demo",
     "executionRoleArn": "arn:aws:iam::714582658072:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 2,
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -75,7 +78,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-11-05T13:06:20.217Z",
-    "registeredBy": "arn:aws:iam::714582658072:user/Angie",
+    "registeredAt": "2023-11-05T11:43:02.974Z",
+    "registeredBy": "arn:aws:iam::714582658072:root",
     "tags": []
 }
