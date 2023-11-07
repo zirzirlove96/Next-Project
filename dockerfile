@@ -11,4 +11,5 @@ COPY . .
 RUN npm run build
 
 EXPOSE 7878
+#CMD ["./test.sh"]
 CMD ["npm", "run", "start"]
