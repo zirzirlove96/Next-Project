@@ -1,13 +1,13 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:714582658072:task-definition/demo:1",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:714582658072:task-definition/demo:8",
   "containerDefinitions": [
     {
       "name": "demo",
-      "image": "714582658072.dkr.ecr.ap-northeast-2.amazonaws.com/demo:latest",
+      "image": "714582658072.dkr.ecr.ap-northeast-2.amazonaws.com/demo:demo:latest",
       "cpu": 0,
       "portMappings": [
         {
-          "name": "study-7878-tcp",
+          "name": "demo-7878-tcp",
           "containerPort": 7878,
           "hostPort": 7878,
           "protocol": "tcp",
@@ -35,7 +35,7 @@
   "family": "demo",
   "executionRoleArn": "arn:aws:iam::714582658072:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 1,
+  "revision": 8,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -73,7 +73,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2023-11-05T11:43:02.974Z",
+  "registeredAt": "2023-12-13T05:34:02.209Z",
   "registeredBy": "arn:aws:iam::714582658072:root",
   "tags": []
 }
